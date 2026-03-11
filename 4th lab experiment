@@ -1,0 +1,102 @@
+AIM
+
+To write a Python program that demonstrates different list operations such as accessing elements, adding new items, copying lists, extending lists, searching elements, sorting, reversing, deleting items, counting elements and slicing lists.
+
+Algorithm
+
+Begin the program.
+Create a list containing employee information.
+Display a specific element using its index position.
+Take a role from the user and add it to the list.
+Print all items of the list using a loop.
+Create a duplicate copy of the list and display it.
+Add another list of employee details using extend.
+Search and display the position of a given element using index.
+Arrange the list elements in sorted order.
+Reverse the order of the list.
+Remove the last element using pop.
+Find how many times a particular element appears.
+Extract a part of the list using slicing and display it.
+Terminate the program.
+
+SOURCE CODE
+
+staff = ["Shivani", "Delhi", "Designer"]
+
+print(staff[1])
+
+def addRole():
+    role = input("Enter new role to add: ")
+    staff.append(role)
+    print("Employee role added:", role)
+
+addRole()
+
+for item in staff:
+    print(item)
+
+def copyList():
+    new_list = staff.copy()
+    print(new_list)
+
+copyList()
+
+def addEmployees():
+    extra = ["Aman", 45678, "Manager"]
+    staff.extend(extra)
+    print(staff)
+
+addEmployees()
+
+def searchIndex():
+    print(staff.index("Designer"))
+
+searchIndex()
+
+def sortList():
+    staff.sort(key=str)
+    print(staff)
+
+sortList()
+
+def reverseList():
+    staff.reverse()
+    print(staff)
+
+reverseList()
+
+def removeLast():
+    staff.pop(-1)
+    print(staff)
+
+removeLast()
+
+def countName():
+    total = staff.count("Shivani")
+    print(total)
+
+countName()
+
+def sliceList():
+    part = staff[0:2:1]
+    print(part)
+
+sliceList()
+
+OUTPUT :
+
+Delhi
+Enter new role to add: tester
+Employee role added: tester
+Shivani
+Delhi
+Designer
+tester
+['Shivani', 'Delhi', 'Designer', 'tester']
+['Shivani', 'Delhi', 'Designer', 'tester', 'Aman', 45678, 'Manager']
+2
+[45678, 'Aman', 'Delhi', 'Designer', 'Manager', 'Shivani', 'tester']
+['tester', 'Shivani', 'Manager', 'Designer', 'Delhi', 'Aman', 45678]
+['tester', 'Shivani', 'Manager', 'Designer', 'Delhi', 'Aman']
+1
+['tester', 'Shivani']
