@@ -1,0 +1,65 @@
+AIM
+
+To implement basic operations on dictionaries in Python such as accessing values, displaying keys and values, checking length, modifying entries, copying dictionaries and iterating through dictionary elements.
+
+Algorithm
+
+Begin the program.
+Create a dictionary called student_info containing student details.
+Create another dictionary called subject_marks containing marks of different subjects.
+Display a value from the dictionary using its key.
+Use the get() method to retrieve another value.
+Print all keys present in the dictionary.
+Print all values stored in the dictionary.
+Display all key–value pairs using items().
+Update one of the values in the dictionary.
+Create a duplicate copy of the dictionary.
+Print the length of the dictionary.
+Traverse the dictionary using a loop and display its elements.
+Terminate the program.
+
+SOURCE CODE
+student_info = {"name":"Shivani","age":20,"course":"Data Science","city":"Delhi"}
+
+subject_marks = {"maths":82,"science":91,"english":75,"history":88}
+
+print("Name:", student_info["name"])
+
+print("Age:", student_info.get("age"))
+
+print("Keys in dictionary:", student_info.keys())
+
+print("Values in dictionary:", student_info.values())
+
+print("Key value pairs:", student_info.items())
+
+print("Dictionary length:", len(student_info))
+
+student_info.update({"age":21})
+print("After update:", student_info)
+
+print("Copied dictionary:", student_info.copy())
+
+print("Subjects:", subject_marks.keys())
+
+print("Marks:", subject_marks.values())
+
+print("Displaying dictionary content:")
+for k in student_info:
+    print(k, student_info[k])
+OUTPUT
+Name: Shivani
+Age: 20
+Keys in dictionary: dict_keys(['name', 'age', 'course', 'city'])
+Values in dictionary: dict_values(['Shivani', 20, 'Data Science', 'Delhi'])
+Key value pairs: dict_items([('name', 'Shivani'), ('age', 20), ('course', 'Data Science'), ('city', 'Delhi')])
+Dictionary length: 4
+After update: {'name': 'Shivani', 'age': 21, 'course': 'Data Science', 'city': 'Delhi'}
+Copied dictionary: {'name': 'Shivani', 'age': 21, 'course': 'Data Science', 'city': 'Delhi'}
+Subjects: dict_keys(['maths', 'science', 'english', 'history'])
+Marks: dict_values([82, 91, 75, 88])
+Displaying dictionary content:
+name Shivani
+age 21
+course Data Science
+city Delhi
