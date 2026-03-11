@@ -1,62 +1,72 @@
-n = int(input("Enter the number of players: "))
+AIM
 
-for i in range(n):
+To write a Python program to compute batting strike rate, bowling economy rate and check the performance of a player using conditional statements.
 
-    print("\nPlayer", i + 1)
+Algorithm
+Start the program.
+Input the number of runs scored and balls faced by the batsman.
+Calculate the strike rate using the formula runs divided by balls multiplied by 100.
+Use conditional statements to decide whether the batting performance is excellent, good, average or poor.
 
-    runs = int(input("Enter the runs scored: "))
-    balls = int(input("Enter the number of balls faced: "))
-    fours = int(input("Enter the number of 4s scored: "))
-    sixes = int(input("Enter the number of 6s scored: "))
-    wickets = int(input("Enter the number of wickets taken: "))
-    runs_conceded = int(input("Enter the number of runs conceded: "))
-    overs = int(input("Enter the number of overs bowled: "))
-    catches = int(input("Enter the number of catches taken: "))
+Next read the runs conceded, overs bowled and wickets taken by the bowler.
+Calculate the economy rate by dividing runs conceded by overs bowled.
+Apply conditions to evaluate the bowling performance.
 
-    strike_rate = (runs / balls) * 100
-    economy = runs_conceded / overs
+Then input the number of catches taken in the field.
+If the number of catches is at least one, display that the player is an active fielder.
+Otherwise display that the player needs improvement.
+End the program.
 
-    # Batting Performance
-    if runs >= 50 and strike_rate >= 120:
-        batter = "Excellent Batter"
-    elif runs >= 30 and strike_rate >= 100:
-        batter = "Good Batter"
-    elif runs >= 20:
-        batter = "Average Batter"
-    else:
-        batter = "Poor Batter"
+SOURCE CODE
 
-    # Bowling Performance
-    if wickets >= 3 and economy <= 6:
-        bowler = "Excellent Bowler"
-    elif wickets >= 2 and economy <= 8:
-        bowler = "Good Bowler"
-    elif wickets >= 1:
-        bowler = "Average Bowler"
-    else:
-        bowler = "Poor Bowler"
+runs = int(input("Enter runs:"))
+balls = int(input("Enter the number of balls faced:"))
 
-    # Fielding Performance
-    if catches >= 2:
-        fielder = "Outstanding Fielder"
-    elif catches == 1:
-        fielder = "Active Fielder"
-    else:
-        fielder = "Needs Improvement"
+strike_rate  = (runs/balls) * 100
 
-    # Overall Performance
-    if batter == "Excellent Batter" and bowler == "Excellent Bowler":
-        overall = "Star All-Rounder"
-    elif batter == "Good Batter" and bowler == "Good Bowler":
-        overall = "Strong All-Rounder"
-    elif batter == "Good Batter" or bowler == "Good Bowler":
-        overall = "Supporting All-Rounder"
-    else:
-        overall = "Needs Improvement"
+if runs > 50 and strike_rate > 120:
+    print("Excellent Batter")
+elif runs > 30 and strike_rate > 100:
+    print("Good Batter")
+elif runs > 20:
+    print("Average Batter")
+else:
+    print("Poor Batter")
 
-    print("\nStrike Rate:", strike_rate)
-    print("Economy:", economy)
-    print("Batting:", batter)
-    print("Bowling:", bowler)
-    print("Fielding:", fielder)
-    print("Overall:", overall)
+run_conceded = int(input("Enter run conceded:"))
+overs = int(input("Enter overs:"))
+wickets = int(input("Enter wickets taken :"))
+
+economy = run_conceded/overs
+
+if wickets >= 3 and economy < 6:
+    print("Excellent Bowler")
+elif wickets >= 2 and economy < 8:
+    print("Good Bowler")
+else:
+    print("Poor Bowler")
+
+catches = int(input("Enter number of catches:"))
+
+if catches > 2:
+    print("Outstanding Fielder")
+elif catches == 1:
+    print("Active Fielder")
+else:
+    print("Needs Improvement")
+
+OUTPUT :
+
+Enter runs scored:150
+Enter balls faced:25
+Excellent Batter
+
+Enter runs conceded:28
+Enter overs bowled:6
+Enter wickets:3
+Good Bowler
+
+Enter number of catches:4
+Outstanding Fielder
+
+
