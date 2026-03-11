@@ -1,0 +1,60 @@
+AIM
+
+To write a Python program to perform operations on tuples such as accessing elements, finding length, counting values, locating index, identifying maximum and minimum values, sorting elements, reversing order and iterating through the tuple.
+
+Algorithm
+
+Begin the program.
+Create two tuples named data and scores.
+Display the first and second values from the tuple using index positions.
+Find the size of the tuple using the length function.
+Determine how many times a value appears using count().
+Locate the position of an element using index().
+Find the highest and lowest value from the scores tuple.
+Display the sorted version of the scores tuple.
+Reverse the order of the scores elements.
+Use a loop to print each value present in the data tuple.
+End the program.
+
+SOURCE CODE
+
+data = ("Roy", 21, "Shivani", "Ravi")
+scores = (21, 54, 95, 56, 67)
+
+print("First value:", data[0])
+print("Second value:", data[1])
+
+print("Tuple length:", len(data))
+
+print("Count of Roy:", data.count("Roy"))
+
+print("Index of 21:", data.index(21))
+
+print("Maximum value:", max(scores))
+
+print("Minimum value:", min(scores))
+
+print("Sorted scores:", sorted(scores))
+
+print("Reversed order:", list(reversed(scores)))
+
+print("Elements inside tuple:")
+for element in data:
+    print(element)
+
+OUTPUT :
+
+First value: Roy
+Second value: 21
+Tuple length: 4
+Count of Roy: 1
+Index of 21: 1
+Maximum value: 95
+Minimum value: 21
+Sorted scores: [21, 54, 56, 67, 95]
+Reversed order: [67, 56, 95, 54, 21]
+Elements inside tuple:
+Roy
+21
+Shivani
+Ravi
