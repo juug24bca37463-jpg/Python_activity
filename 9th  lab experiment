@@ -1,23 +1,19 @@
 Aim
 
-To study and implement basic functions of Python’s `re` module for pattern matching and string operations.
+To create a dataset of weekly temperatures and display it using a line graph
 
+Algorithm
 
-
-##  Algorithm
-
-1. Start the program
-2. Import the `re` module
-3. Define a sample string
-4. Use `match()` to check pattern at the beginning
-5. Use `search()` to find a pattern in the string
-6. Use `findall()` to get all matches
-7. Use `finditer()` to display matches with position
-8. Use `sub()` to replace characters
-9. Use `split()` to split the string
-10. Use `compile()` to create a reusable pattern
-11. Take date input and validate using `fullmatch()`
-12. Stop the program
+1. Start
+2. Import required libraries (pandas and matplotlib)
+3. Create a dictionary with days of the week and corresponding temperatures
+4. Convert the dictionary into a DataFrame
+5. Plot the graph using days on the x-axis and temperature on the y-axis
+6. Add labels for x-axis and y-axis
+7. Give a title to the graph
+8. Enable grid for better visualization
+9. Display the graph
+10. Stop
 
 CODE:
 
