@@ -1,0 +1,28 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Data dictionary
+data = {
+    "Days": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    "Temperature": [30, 12, 31, 29, 28, 27, 26] # Adjusted to match a 7-day week
+}
+
+df = pd.DataFrame(data)
+
+plt.plot(df["Days"], df["Temperature"], marker='o', linestyle='--', color='b')
+
+plt.xlabel("Days")
+plt.ylabel("Temperature (°C)")
+plt.title("Temperature over a week")
+plt.grid(True)
+plt.show()
+Output:
+  Days  Temperature
+0  Mon           30
+1  Tue           12
+2  Wed           31
+3  Thu           29
+4  Fri           28
+5  Sat           27
+6  Sun           26
+
