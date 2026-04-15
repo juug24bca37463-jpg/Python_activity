@@ -1,6 +1,25 @@
-import re
 
-# Updated text with Shivani and a new phone number
+Aim
+
+To study and implement basic functions of Python’s `re` module for pattern matching and string operration
+
+ Algorithm
+
+1. Start the program
+2. Import the `re` module
+3. Define a sample string
+4. Use `match()` to check pattern at the beginning
+5. Use `search()` to find a pattern in the string
+6. Use `findall()` to get all matches
+7. Use `finditer()` to display matches with position
+8. Use `sub()` to replace characters
+9. Use `split()` to split the string
+10. Use `compile()` to create a reusable pattern
+11. Take date input and validate using `fullmatch()`
+12. Stop the program
+
+CODE:
+import re
 text = "My email is shivani@gmail.com and phone is 9123456789"
 
 # 1. re.match() - Checks for a match only at the beginning of the string
